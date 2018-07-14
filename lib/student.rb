@@ -2,7 +2,7 @@ require_relative "../config/environment.rb"
 
 class Student
 
-  namespace :db do
+  namespace :Student:Class do
   desc 'migrate changes to your database'
   task :migrate => :environment do
     Student.create_table
