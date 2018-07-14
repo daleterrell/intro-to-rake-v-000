@@ -7,7 +7,6 @@ class Student
   task :migrate => :environment do
     Student.create_table
   end
-end
   
   attr_accessor :name, :grade
   
