@@ -2,8 +2,12 @@ require_relative "../config/environment.rb"
 
 class Student
 
-  # Remember, you can access your database connection anywhere in this class
-  #  with DB[:conn]  
+  namespace :db do
+  desc 'migrate changes to your database'
+  task :migrate => :environment do
+    Student.create_table
+  end
+end
   
   attr_accessor :name, :grade
   
